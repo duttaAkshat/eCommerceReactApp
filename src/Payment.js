@@ -2,10 +2,12 @@ import React from "react";
 import "./Payment.css";
 import { useStateValue } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
+import Googlepay from "./Googlepay";
+import { getBasketTotal } from "./reducer";
 import { Link } from "react-router-dom";
 
 function Payment() {
-  const [{ basket, user }, dispatch] = useStateValue(); // Add parentheses to useStateValue
+  const [{ basket, user }, dispatch] = useStateValue();
 
   return (
     <div className="payment">
@@ -45,7 +47,9 @@ function Payment() {
           <div className="payment__title">
             <h3>Payment Method</h3>
           </div>
-          <div className="payment__detail">{/* stripe payment */}</div>
+          <div className="payment__detail">
+            <Googlepay subtotal={getBasketTotal(basket)} />
+          </div>
         </div>
       </div>
     </div>

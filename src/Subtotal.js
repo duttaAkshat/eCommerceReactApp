@@ -3,10 +3,11 @@ import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; 
+import Googlepay from "./Googlepay";
 
 function Subtotal() {
-  const navigate = useNavigate(); // Use useNavigate instead of useHistory
+  const navigate = useNavigate(); 
   const [{ basket }, dispatch] = useStateValue();
 
   return (
@@ -20,6 +21,7 @@ function Subtotal() {
             <small className="subtotal__gift">
               <input type="checkbox" /> This order contains a gift.
             </small>
+            
           </>
         )}
         decimalScale={2}
