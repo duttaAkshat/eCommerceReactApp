@@ -21,11 +21,21 @@
 }
 
 .subtotal > button {
-    background: #945ae4;
     border: 2px solid;
     padding: 4px 12px;
     margin-top: 10px;
     border-color: black;
     color: rgb(230, 231, 223);
     font-weight: bolder;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #945AE4; 
+    padding: 8px;
+    border-top: 1px solid #ddd; 
+}
+
+.subtotal button:hover {
+    background-color: #9584ac;
 }

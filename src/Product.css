@@ -10,6 +10,7 @@
     min-width: 100px;
     background-color: white;
     z-index: 1;
+    transition: transform 0.3s; 
 }
 
 .product__rating {
@@ -33,11 +34,26 @@
 }
 
 .product > button {
-    background: #945ae4;
     border: 2px solid;
     padding: 4px 12px;
     margin-top: 10px;
     border-color: black;
     color: rgb(230, 231, 223);
     font-weight: bolder;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #945AE4; 
+    padding: 8px;
+    border-top: 1px solid #ddd; 
+}
+  
+.product button:hover {
+    background-color: #9584ac;
+}
+
+.product:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }

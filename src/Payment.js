@@ -15,7 +15,8 @@ function Payment() {
         <h1>
           Checkout (<Link to="/checkout">{basket?.length} items</Link>)
         </h1>
-        <div className="payment__section">
+        <h3>{user ? ` ${user.email}` : "Please Login before Checkout"}</h3>
+        {/* <div className="payment__section">
           <div className="payment__title">
             <h3>Delivery Address </h3>
           </div>
@@ -24,7 +25,7 @@ function Payment() {
             <p>123 React Lane</p>
             <p>India</p>
           </div>
-        </div>
+        </div> */}
 
         <div className="payment__section">
           <div className="payment__title">

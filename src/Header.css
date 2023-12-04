@@ -6,6 +6,7 @@
     position: sticky;  
     top: 0;
     z-index: 100;
+    cursor: pointer;
 }
 
 .header__logo{
@@ -27,6 +28,11 @@
     padding: 10px;
     border: none;
     width: 100%;
+}
+
+.header__search > form{
+    display: flex;
+    flex: 1;
 }
 
 .header__searchIcon{
