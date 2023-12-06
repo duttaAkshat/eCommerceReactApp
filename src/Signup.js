@@ -1,35 +1,31 @@
-import React, { useState } from "react";
-import "./login.css";
+import { React, useState } from "react";
 import { Link } from "react-router-dom";
+import "./login.css";
 import { useNavigate } from "react-router-dom";
 import logo from "./logo.jpg";
 import { auth, register } from "./firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import Signup from "./Signup";
 
-function Login() {
+function Signup() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const handleSignIn = async (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      await register(email, password);
       navigate("/");
     } catch (error) {
-      console.error("Error during sign-in:", error.message);
+      console.error("Error during registration:", error.message);
     }
   };
-
   return (
     <div className="login">
       <Link to="/">
         <img className="login__logo" src={logo} alt="Logo" />
       </Link>
       <div className="login__container">
-        <h1>Sign-in</h1>
+        <h1>Create New Account</h1>
         <form>
           <h5>E-mail</h5>
           <input
@@ -43,22 +39,21 @@ function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button
-            onClick={handleSignIn}
-            className="login__signInButton"
-            type="submit"
-          >
-            Sign-In
-          </button>
         </form>
+
+        <div>
+          <button onClick={handleRegister} className="login__signInButton">
+            Signup
+          </button>
+        </div>
         <p>
-          By signing in, you agree to the website's Conditions of Use & Sale.
+          By signing up, you agree to the website's Conditions of Use & Sale.
           Please see our Privacy Notice, our Cookies Notice, and our
           Interest-Based Ads Notice.
         </p>
-        <Link to="/signup">
+        <Link to="/login">
           <button className="login__registerButton">
-            Create a new Account
+            Already a user, Go to login page
           </button>
         </Link>
       </div>
@@ -66,4 +61,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;

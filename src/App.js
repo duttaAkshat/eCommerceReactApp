@@ -11,6 +11,7 @@ import { useStateValue } from "./StateProvider";
 import Payment from "./Payment";
 import SearchResults from "./SearchResults";
 import CustomerSupport from "./CustomerSupport";
+import Signup from "./Signup";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -168,6 +169,14 @@ function App() {
             element={
               <React.Fragment>
                 <Login />
+              </React.Fragment>
+            }
+          />
+          <Route
+            path="/signup"
+            element={
+              <React.Fragment>
+                <Signup />
               </React.Fragment>
             }
           />
