@@ -98,7 +98,7 @@ function Home() {
             title="Vaku Fitness Tracker with Heart Rate Monitor"
             price={7199}
             rating={3}
-            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl5vwiXCwnlJbNhLq4tEG-YDxrNw2QJcZJJQ&usqp=CAU"
+            image="https://m.media-amazon.com/images/I/51KW-xrVq-L.jpg"
           />
 
           <Product
@@ -123,7 +123,7 @@ function Home() {
             title="HP 355 Sleek Wireless Mouse"
             price={750}
             rating={5}
-            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSobZ1r5hmF_oiZElxKSd3QvToeoj8z5dt2mg&usqp=CAU"
+            image="https://m.media-amazon.com/images/I/51Err8J-slL.jpg"
           />
 
           <Product
@@ -131,7 +131,7 @@ function Home() {
             title="Chinahouse Ceramic Cooking Pot Set"
             price={500}
             rating={3}
-            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsyDcJV3HA6EvT4DYDyVvip-BY8EgGcBHP8g&usqp=CAU"
+            image="https://m.media-amazon.com/images/I/517nDmj1i8L.jpg"
           />
         </div>
         <div className="home__footer">
